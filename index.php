@@ -2,6 +2,16 @@
 
 header("Content-type:application/json");
 
+include("php-cors/src/Cors.php");
+
+new \Lz\PHP\Cors([
+    'origin'      => '*',
+    'credentials' => true,
+    'max-age'     => 86400,
+    'headers'     => ['Content-Type', 'Accept', 'Origin', 'Authorization'],
+    'methods'     => ['GET']
+]);
+
 if($_SERVER['REQUEST_METHOD'] == 'GET'){
     if(preg_match("/\bindex.php\/(.+)\b/", $_SERVER['PHP_SELF'], $matched)){
         switch ($matched[1]) {
