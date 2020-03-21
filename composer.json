@@ -1,0 +1,12 @@
+{
+    "name": "luizschmitt/covid19",
+    "require": {
+        "luizschmitt/php-cors": "^1.0"
+    },
+    "authors": [
+        {
+            "name": "Luiz Schmitt",
+            "email": "lzschmitt@gmail.com"
+        }
+    ]
+}

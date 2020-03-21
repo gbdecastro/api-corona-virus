@@ -1,0 +1,51 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "32759f93a587186f4df4583c1ef02f00",
+    "packages": [
+        {
+            "name": "luizschmitt/php-cors",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/luizschmitt/php-cors.git",
+                "reference": "c894835caef00688d2691dc00b885ea12a442c88"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/luizschmitt/php-cors/zipball/c894835caef00688d2691dc00b885ea12a442c88",
+                "reference": "c894835caef00688d2691dc00b885ea12a442c88",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Lz\\PHP\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Luiz Schmitt",
+                    "email": "lzschmitt@gmail.com"
+                }
+            ],
+            "description": "Classe para controlar recursos de outro site em dominios diferentes",
+            "time": "2019-11-28T17:54:13+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
