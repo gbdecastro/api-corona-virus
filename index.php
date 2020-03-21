@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
     $path = $_SERVER['REQUEST_URI'];
 
-    if (preg_match("/(.+)\??(.+)?/", $path, $m)) {
+    if (preg_match("/\b(\/.+)\??(.+)?\b/", $path, $m)) {
         $route = $m[1];
         switch ($route) {
             case '/api/data/world':
