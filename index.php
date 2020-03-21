@@ -12,8 +12,6 @@ new \Lz\PHP\Cors([
     'methods' => ['GET'],
 ]);
 
-echo preg_match("/\b\/(.+)??(.+)?\b/", $_SERVER['REQUEST_URI'], $matched);
-
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
     switch ($_SERVER['REQUEST_URI']) {
