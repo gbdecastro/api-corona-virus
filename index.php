@@ -17,8 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $path = $_SERVER['REQUEST_URI'];
 
     if (preg_match("/\b(\/.+)\??(.+)?\b/", $path, $m)) {
-        $route = $m[1];
-        switch ($route) {
+        switch ($path) {
             case '/api/data/world':
                 $data = file_get_contents('https://services1.arcgis.com/0MSEUqKaxRlEPj5g/arcgis/rest/services/ncov_cases/FeatureServer/1/query?f=json&where=Confirmed%20%3E%200&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&outSR=102100&cacheHint=true');
                 $data = json_decode($data, true);
