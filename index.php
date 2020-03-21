@@ -1,6 +1,6 @@
 <?php
 
-//header("Content-type:application/json");
+header("Content-type:application/json");
 
 include("php-cors/src/Cors.php");
 
@@ -13,11 +13,16 @@ new \Lz\PHP\Cors([
 ]);
 
 if($_SERVER['REQUEST_METHOD'] == 'GET'){
-    if(preg_match("/\bindex.php\/(.+)\b/", $_SERVER['REQUEST_URI'], $matched)){
+    if(preg_match("/\bindex.php\/(.+)\b/", $_SERVER['PHP_SELF'], $matched)){
         switch ($matched[1]) {
             case 'api/data/world':
                 $data = file_get_contents('https://services1.arcgis.com/0MSEUqKaxRlEPj5g/arcgis/rest/services/ncov_cases/FeatureServer/1/query?f=json&where=Confirmed%20%3E%200&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&outSR=102100&cacheHint=true');
                 $data = json_decode($data,true);
+
+                foreach ($data['features'] as $key => $value) {
+                    
+                }
+
                 echo json_encode($data['features']);
                 break;
             case 'api/data/brazil':
